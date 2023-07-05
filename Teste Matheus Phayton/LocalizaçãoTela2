@@ -1,0 +1,26 @@
+import time
+import pyautogui
+
+def executar_codigo():
+    
+    # Abrir o Power BI
+    pyautogui.press('win')
+    time.sleep(1)
+    pyautogui.write('Power BI Desktop')
+    pyautogui.press('enter')
+    time.sleep(25)
+
+    # Localizar e abrir o arquivo específico no Power BI
+    pyautogui.hotkey('ctrl', 'o')
+    time.sleep(10)
+    pyautogui.write(COLOCA AQUI CAMINHO DO PB / NOME DO ARQUIVO')
+    pyautogui.press('enter')
+    time.sleep(15)
+    
+    # Clicar na opção "Atualizar arquivo"
+    pyautogui.moveTo(x=714, y=86)  # Posição do mouse no botão "Atualizar arquivo" (ajuste de acordo com a sua tela)
+    pyautogui.click()
+    time.sleep(600)
+
+
+<!-- Instalar biblioteca --!>

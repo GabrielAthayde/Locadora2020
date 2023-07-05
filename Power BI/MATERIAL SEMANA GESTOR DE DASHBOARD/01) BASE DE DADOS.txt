@@ -1,0 +1,19 @@
+https://onedrive.live.com/download?cid=AFA2E38A94022492&resid=AFA2E38A94022492%211416&authkey=AMNPcTVn_tFGTWs&em=excel
+
+
+
+
+---------------------------------
+
+
+let
+    Fonte = List.Dates(#date(2022, 1, 1), 365, #duration(1, 0, 0, 0)),
+    #"Convertido para Tabela" = Table.FromList(Fonte, Splitter.SplitByNothing(), null, null, ExtraValues.Error),
+    #"Tipo Alterado" = Table.TransformColumnTypes(#"Convertido para Tabela",{{"Column1", type date}}),
+    #"Colunas Renomeadas" = Table.RenameColumns(#"Tipo Alterado",{{"Column1", "Data"}}),
+    #"Mês Inserido" = Table.AddColumn(#"Colunas Renomeadas", "Num Mês", each Date.Month([Data]), Int64.Type),
+    #"Nome do Mês Inserido" = Table.AddColumn(#"Mês Inserido", "Mês", each Date.MonthName([Data], "pt-BR"), type text),
+    #"Ano Inserido" = Table.AddColumn(#"Nome do Mês Inserido", "Ano", each Date.Year([Data]), Int64.Type),
+    #"Primeiros caracteres extraídos" = Table.TransformColumns(#"Ano Inserido", {{"Mês", each Text.Start(_, 3), type text}})
+in
+    #"Primeiros caracteres extraídos"

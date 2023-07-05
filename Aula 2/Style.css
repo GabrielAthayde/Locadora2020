@@ -1,0 +1,122 @@
+html{
+    scroll-behavior: smooth;
+}
+
+/*Corpo da Aplicação*/
+body {
+    background-color: #000000;
+    color:rgb(233, 148, 37);
+    text-align: justify;
+    
+    width: 85%;
+    margin: auto;
+}
+
+section{
+    padding: 64px 256px;
+    
+    /*OU
+    padding: 64px 256px 64px 256px;
+    
+      OU
+    padding-left: 256px;
+    padding-right: 256px;
+    padding-bottom: 64px;
+    padding-top: 64px; */
+}
+
+a: :link {
+    color: #f2e7dc;
+}
+a: :visited{
+    color: #95bfb8
+}
+a: :hover {
+    color: #025454;
+}
+a: :active {
+    color:#0D0D0D;
+}
+
+/*Tabela*/
+table {
+    font-weight: 100%;
+}
+td{
+    background-color: #A9D9D0;
+}
+td,th{
+    border: #000000 solid 1px;
+    border-radius: 4px;
+    text-align: center;
+
+    /* OU
+    border-width: 3px;
+    border-style: solid;
+    border-color: #000000; 
+    border-radius: 4px; */
+}
+tr{
+    background-color: aquamarine;
+}
+
+p{
+    text-align: justify;
+    text-indent: 50px;
+}
+h1{
+    text-align: center;
+}
+h2{
+    text-align: center;
+}
+h3{
+    text-align: center;
+    color: #000000;
+}
+img{
+    width: 200px;
+    display: block;
+    margin: auto;
+    border-radius: 50px;
+}
+
+.bookTitle{
+    background-color: #000000;
+    color: rgb(255, 255, 255);
+    text-align: center;
+}
+
+#sectionHpF, #sectionHpS, #sectionHpA {
+    background-color: #c6fff4
+}
+
+#header{
+    background-color: #038c7f;
+    color: #c6fff4;
+    padding: 20px;
+    margin-bottom: 0px;
+}
+#sumary {
+    background-color: #038c7f;
+    color: azure;
+    padding: 20px;
+    margin-bottom: 0px;
+    border-radius: 0 0 50px 50px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#yourLibrary  {
+    text-indent: 0px;
+    text-align: center;
+}
+
+footer{
+    background-color: #038c7f;
+    width: 100%;
+    text-align: center;
+    padding: 30px 0;
+}

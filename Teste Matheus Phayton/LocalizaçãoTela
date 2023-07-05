@@ -1,0 +1,9 @@
+import pyautogui
+
+# Loop infinito para imprimir as coordenadas atualizadas
+while True:
+    # Obter as coordenadas do cursor do mouse
+    x, y = pyautogui.position()
+    
+    # Imprimir as coordenadas
+    print(f"X: {x}, Y: {y}")
